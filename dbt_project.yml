@@ -1,5 +1,5 @@
 name: 'dbt_clients_exchange'
-version: '0.1.0'
+version: '0.1.1'
 
 #  profile: 'dbt_clients_exchange'
 
