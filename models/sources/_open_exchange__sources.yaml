@@ -1,0 +1,11 @@
+version: 2
+
+sources:
+  - name: open_exchange
+    database: "{{ var('raw_database', 'gcp-raw-data') }}"
+    schema: "open_exchange"
+
+    loader: DLT
+
+    tables:
+      - name: rates
