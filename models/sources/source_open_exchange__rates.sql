@@ -9,9 +9,11 @@ final as (
     select
         {{ adapter.quote('date') }} as date_day,
         base as base_currency,
-        eur,
-        usd,
-        huf
+        rates__eur as eur,
+        rates__usd as usd,
+        rates__huf as huf,
+        rates__gbp as gbp,
+        rates__pln as pln
 
     from source
 )
