@@ -29,9 +29,9 @@
 case
 {%- for currency in convert_from_upper %}
     when {{ currency_column }} = '{{ currency }}' then
-        {%- if currency == target_upper -%}
+        {% if currency == target_upper -%}
             coalesce({{ column_name }}, 0)
-        {%- else -%}
+        {% else -%}
             coalesce({{ column_name }}, 0) * coalesce({{ currency | lower }}_to_{{ target_upper | lower }}, 0)
         {%- endif -%}
 {%- endfor %}
