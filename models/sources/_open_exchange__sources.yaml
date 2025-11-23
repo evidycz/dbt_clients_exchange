@@ -2,7 +2,7 @@ version: 2
 
 sources:
   - name: open_exchange
-    database: "{{ var('raw_database', 'gcp-raw-data') }}"
+    database: "{{ var('open_exchange_database').get(target.name, target.database) }}"
     schema: "open_exchange"
 
     loader: DLT
